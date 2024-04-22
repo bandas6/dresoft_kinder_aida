@@ -1,0 +1,71 @@
+<ion-grid class="contenedor_general">
+
+  <div class="contenedor_fondo_cabecera">
+    <ion-img id="fondoCabecera">
+  
+    </ion-img>
+  </div>
+
+  <ion-grid id="formLogin">
+    <ion-col size="12" class="contenedor_nombre">
+      <ion-title></ion-title>
+      <ion-col size="12" class="nombre_aplicacion">
+        <ion-img></ion-img>
+        <ion-text>KINDER AIDA</ion-text>
+      </ion-col>
+    </ion-col>
+    <ion-row class="contenedor_login">
+
+
+      <ion-col size="10" class="contenedor_formulario">
+
+        <form [formGroup]="formLogin" (ngSubmit)="ingresar()">
+
+          <ion-item class="inputs_login">
+            <!-- <ion-label position="stacked" for="usuario">
+              Usuario:
+            </ion-label> -->
+            <ion-input type="text" formControlName="usuario" id="usuario" placeholder="Usuario"></ion-input>
+          </ion-item>
+
+          <hr>
+
+          <ion-item class="inputs_login">
+            <!-- <ion-label position="stacked" for="contrasenia">
+              Usuario:
+            </ion-label> -->
+            <ion-input type="text" formControlName="contrasenia" id="contrasenia" placeholder="Contraseña"></ion-input>
+          </ion-item>
+
+        </form>
+        
+        <ion-col size="12" class="contenedor_botones">
+
+          <button ion-button type="submit" class="btn boton_principal">
+            <ion-text *ngIf="!ingresando">Iniciar Sesión</ion-text>
+            <ion-text class="d-flex align-items-center" *ngIf="ingresando">
+              <ion-text>Ingresando</ion-text>
+              <ion-spinner class="spinner_ingresando" name="crescent"></ion-spinner>
+            </ion-text>
+          </button>
+
+          <ion-text class="enlaces">
+            <a (click)="recuperarContrasenia()">Recuperar mi contraseña</a>
+          </ion-text>
+
+        </ion-col>
+
+      </ion-col>
+
+      
+    </ion-row>
+  </ion-grid>
+
+  <ion-col size="12" class="footer">
+    <!-- <ion-img></ion-img> -->
+    <ion-text class="footer_text">
+      <ion-text>Desarrollado por Dresoft</ion-text>
+    </ion-text>
+  </ion-col>
+
+</ion-grid>
