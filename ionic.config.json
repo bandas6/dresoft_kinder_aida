@@ -1,0 +1,7 @@
+{
+  "name": "Kínder_Aida",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
